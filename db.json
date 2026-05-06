@@ -1,0 +1,29 @@
+{
+  "users": [],
+  "posts": [
+    {
+      "id": "1",
+      "title": "Getting Started with React",
+      "description": "React is a JavaScript library for building user interfaces. Learn the basics of components, props, and state management in this introductory guide.",
+      "imageUrl": "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=800&q=80",
+      "authorId": "demo",
+      "authorName": "Demo Author"
+    },
+    {
+      "id": "2",
+      "title": "Mastering Tailwind CSS",
+      "description": "Tailwind CSS is a utility-first CSS framework that allows you to build modern designs without leaving your HTML. Discover tips and tricks.",
+      "imageUrl": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&q=80",
+      "authorId": "demo",
+      "authorName": "Demo Author"
+    },
+    {
+      "id": "3",
+      "title": "Node.js Best Practices",
+      "description": "Explore the best practices for building scalable and maintainable Node.js applications. From project structure to error handling.",
+      "imageUrl": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80",
+      "authorId": "demo",
+      "authorName": "Demo Author"
+    }
+  ]
+}
