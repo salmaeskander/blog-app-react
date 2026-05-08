@@ -41,7 +41,7 @@ export default function PostCard({ post, onDelete }) {
             background: 'linear-gradient(to top, var(--bg-card) 0%, transparent 60%)',
           }}
         />
-        {/* Owner badge */}
+        
         {isOwner && (
           <div
             style={{ position: 'absolute', top: '0.75rem', right: '0.75rem' }}
@@ -51,9 +51,9 @@ export default function PostCard({ post, onDelete }) {
         )}
       </div>
 
-      {/* Content */}
+    
       <div style={{ padding: '1.25rem', flex: 1, display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
-        {/* Title */}
+        
         <h2
           style={{
             fontSize: '1.1rem',
@@ -66,7 +66,6 @@ export default function PostCard({ post, onDelete }) {
           {post.title}
         </h2>
 
-        {/* Description */}
         <p
           style={{
             fontSize: '0.875rem',
@@ -82,12 +81,11 @@ export default function PostCard({ post, onDelete }) {
           {post.description}
         </p>
 
-        {/* Divider */}
         <div className="divider-line" />
 
-        {/* Footer */}
+       
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-          {/* Author */}
+         
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
             <div
               style={{
@@ -117,7 +115,7 @@ export default function PostCard({ post, onDelete }) {
             </span>
           </div>
 
-          {/* Actions (only for owner) */}
+      
           {isOwner && (
             <div style={{ display: 'flex', gap: '0.5rem' }}>
               <Link

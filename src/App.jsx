@@ -4,7 +4,7 @@ import Navbar from './components/Navbar';
 import ProtectedRoute from './components/ProtectedRoute';
 import Home from './pages/Home';
 import Auth from './pages/Auth';
-import AddEditPost from './pages/AddEditPost';
+import AddEditPost from './pages/Addpost';
 
 export default function App() {
   return (
@@ -12,11 +12,11 @@ export default function App() {
       <AuthProvider>
         <Navbar />
         <Routes>
-          {/* Public routes */}
+        
           <Route path="/" element={<Home />} />
           <Route path="/auth" element={<Auth />} />
 
-          {/* Protected routes */}
+         
           <Route
             path="/post/new"
             element={
@@ -34,8 +34,7 @@ export default function App() {
             }
           />
 
-          {/* 404 fallback */}
-          <Route
+      <Route
             path="*"
             element={
               <div

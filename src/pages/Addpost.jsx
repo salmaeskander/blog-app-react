@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useNavigate, useParams, useLocation } from 'react-router-dom';
-import { createPost, updatePost } from '../services/api';
+import { createPost, updatePost } from '../services/Service';
 import { useAuth } from '../context/AuthContext';
 
 export default function AddEditPost() {
@@ -20,7 +20,7 @@ export default function AddEditPost() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
 
-  // Populate form if editing
+ 
   useEffect(() => {
     if (isEdit && existingPost) {
       setForm({
@@ -75,7 +75,7 @@ export default function AddEditPost() {
       }}
     >
       <div style={{ width: '100%', maxWidth: '580px' }}>
-        {/* Header */}
+        
         <div style={{ marginBottom: '2rem' }}>
           <span
             style={{
@@ -111,7 +111,7 @@ export default function AddEditPost() {
           </p>
         </div>
 
-        {/* Card */}
+       
         <div
           className="card-glass"
           style={{ padding: '2rem', boxShadow: '0 20px 60px rgba(0,0,0,0.5)' }}
@@ -130,13 +130,13 @@ export default function AddEditPost() {
                 marginBottom: '1.25rem',
               }}
             >
-              ⚠ {error}
+               {error}
             </div>
           )}
 
-          {/* Form */}
+         
           <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
-            {/* Title */}
+          
             <div>
               <label
                 style={{
@@ -147,9 +147,7 @@ export default function AddEditPost() {
                   letterSpacing: '0.15em',
                   marginBottom: '0.4rem',
                 }}
-              >
-                TITLE *
-              </label>
+              >TITLE * </label>
               <input
                 className="input-field"
                 type="text"
@@ -160,7 +158,7 @@ export default function AddEditPost() {
               />
             </div>
 
-            {/* Description */}
+           
             <div>
               <label
                 style={{
@@ -185,7 +183,7 @@ export default function AddEditPost() {
               />
             </div>
 
-            {/* Image URL */}
+           
             <div>
               <label
                 style={{
@@ -207,7 +205,7 @@ export default function AddEditPost() {
                 onChange={handleChange}
                 placeholder="https://example.com/image.jpg"
               />
-              {/* Preview */}
+              
               {form.imageUrl && (
                 <div
                   style={{
@@ -230,7 +228,7 @@ export default function AddEditPost() {
               )}
             </div>
 
-            {/* Actions */}
+          
             <div style={{ display: 'flex', gap: '1rem', marginTop: '0.5rem' }}>
               <button
                 type="button"

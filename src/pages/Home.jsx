@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { getPosts, deletePost } from '../services/api';
+import { getPosts, deletePost } from '../services/Service';
 import PostCard from '../components/PostCard';
 import { useAuth } from '../context/AuthContext';
 
@@ -14,7 +14,7 @@ export default function Home() {
     try {
       setLoading(true);
       const res = await getPosts();
-      // Newest first
+     
       setPosts(res.data.reverse());
     } catch {
       setError('Failed to load posts. Is the server running?');
@@ -38,7 +38,7 @@ export default function Home() {
 
   return (
     <main style={{ maxWidth: '1100px', margin: '0 auto', padding: '2rem 1.5rem' }}>
-      {/* Hero Header */}
+      
       <div style={{ marginBottom: '3rem' }}>
         <div
           style={{
@@ -56,7 +56,7 @@ export default function Home() {
               letterSpacing: '0.2em',
             }}
           >
-            ── LATEST POSTS ──
+            LATEST POSTS
           </span>
         </div>
         <h1
@@ -87,7 +87,7 @@ export default function Home() {
         </p>
       </div>
 
-      {/* Loading */}
+    
       {loading && (
         <div
           style={{
@@ -104,7 +104,7 @@ export default function Home() {
         </div>
       )}
 
-      {/* Error */}
+      
       {error && (
         <div
           style={{
@@ -118,11 +118,11 @@ export default function Home() {
             marginBottom: '2rem',
           }}
         >
-          ⚠ {error}
+          {error}
         </div>
       )}
 
-      {/* Posts Grid */}
+     
       {!loading && !error && (
         <>
           {posts.length === 0 ? (
@@ -164,7 +164,7 @@ export default function Home() {
         </>
       )}
 
-      {/* FAB - only for logged in users */}
+     
       {user && (
         <Link to="/post/new" className="fab" title="New Post">
           +

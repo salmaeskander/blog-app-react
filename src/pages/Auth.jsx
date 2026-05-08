@@ -17,7 +17,7 @@ export default function Auth() {
     confirmPassword: '',
   });
 
-  // Already logged in → redirect home
+  
   if (user) return <Navigate to="/" replace />;
 
   const handleChange = (e) => {
@@ -71,7 +71,7 @@ export default function Auth() {
       }}
     >
       <div style={{ width: '100%', maxWidth: '440px' }}>
-        {/* Header */}
+       
         <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
           <span
             style={{
